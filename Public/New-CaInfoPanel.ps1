@@ -5,7 +5,7 @@
     )
     
     return @'
-<ac:structured-macro ac:name="info" ac:schema-version="1" ac:macro-id="29567c00-855a-4b37-a878-dca8ee284f7e">
+<ac:structured-macro ac:name="info" ac:schema-version="1">
     <ac:rich-text-body>
        <p>{0}</p>
     </ac:rich-text-body>
