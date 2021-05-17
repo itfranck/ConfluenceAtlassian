@@ -1,13 +1,21 @@
 ﻿function Set-CADocument {
     [CmdletBinding()]
     param (
-        [Parameter()]
+        [Parameter(ParameterSetName = 'Document',Mandatory=$true)]
         [ValidateNotNull()]
         [CADocument]$Document,
+        [Parameter(ParameterSetName = 'DocumentId',Mandatory=$true)]
+        [Int]$DocumentId,
         [String]$Title,
         [String]$Body
     )
    
+    if ($PSCmdlet.ParameterSetName -eq 'DocumentId') {
+        $Document = Get-CADocument -Id $DocumentId -ContextOnly
+    }
+
+       if ([String]::IsNullOrEmpty($Title)) { $Title = $Document.Title }
+        if ($null -eq $Body) { $Body = $Document.Body }
     
     try {
         $Result = Invoke-CAApi -Method Put -Path "/content/$($Document.ID)" -ContentType application/json -Body (@{

@@ -6,5 +6,5 @@
     )
     
     $TablePattern = "<$TitleTag>$Title</$TitleTag>\s(?:<ac:.*?</ac:structured-macro>)?.*?<table>.*?</table>"
-    [regex]::Matches($Boop.body, $TablePattern , [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    [regex]::Matches($Document.body, $TablePattern , [System.Text.RegularExpressions.RegexOptions]::Singleline)
 }
