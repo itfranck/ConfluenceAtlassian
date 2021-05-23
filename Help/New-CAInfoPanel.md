@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-CaInfoPanel
+# New-CAInfoPanel
 
 ## SYNOPSIS
 Create an information panel.
@@ -13,7 +13,7 @@ Create an information panel.
 ## SYNTAX
 
 ```
-New-CaInfoPanel [[-Message] <Object>] [<CommonParameters>]
+New-CAInfoPanel [[-Message] <Object>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +23,7 @@ Create an information panel.
 
 ### Example 1
 ```powershell
-PS C:\> New-CaInfoPanel -Message 'Hello world' 
+PS C:\> New-CAInfoPanel -Message 'Hello world' 
 ```
 
 Create an info panel.

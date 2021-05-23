@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-CaTable
+# New-CATable
 
 ## SYNOPSIS
 Create a confluence table from an object.
@@ -13,7 +13,7 @@ Create a confluence table from an object.
 ## SYNTAX
 
 ```
-New-CaTable [[-Title] <String>] [[-TitleTag] <String>] [[-InfoMessage] <String>] [[-Columns] <Object[]>]
+New-CATable [[-Title] <String>] [[-TitleTag] <String>] [[-InfoMessage] <String>] [[-Columns] <Object[]>]
  [[-Rows] <Object[]>] [-Numbered] [[-HeaderStyle] <String>] [[-Style] <String>] [<CommonParameters>]
 ```
 
@@ -29,7 +29,7 @@ PS C:\> $ListOfObject = @(
     [PSCustomObject]@{Word1 = 'testA'; Word2 = 'test2A';word3 = '11';word4 = '22' }
 )
 
-$Table = New-CaTable -Style Wide -Columns @(
+$Table = New-CATable -Style Wide -Columns @(
     New-CATableColumn -Name 'Word1' #-Width 48
     New-CATableColumn -Name 'Word2' -Text 'Second word'
     'word3',
@@ -37,12 +37,12 @@ $Table = New-CaTable -Style Wide -Columns @(
    ) -Title 'List of manufacturers' -InfoMessage "This table was last generated $((Get-Date).ToLongDateString())" -Rows $ListOfObject -TitleTag h1
 ```
 
-Create a new confluence table using the wide style with "List of manufacturers" title surrounded by a H1 tag (default is h2) along with a info panel. $ListOfObject will be iterated upon and each members will be added to the table. New-CaTableColumn can be used to specify a different text for the header and a custom width.
+Create a new confluence table using the wide style with "List of manufacturers" title surrounded by a H1 tag (default is h2) along with a info panel. $ListOfObject will be iterated upon and each members will be added to the table. New-CATableColumn can be used to specify a different text for the header and a custom width.
 
 ## PARAMETERS
 
 ### -Columns
-List of columns to be included in the table. Strings or CATableColumn objects (See New-CaTableColumn) can be included
+List of columns to be included in the table. Strings or CATableColumn objects (See New-CATableColumn) can be included
 
 ```yaml
 Type: Object[]

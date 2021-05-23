@@ -10,7 +10,7 @@
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Get context about the connected instance. The context information is provided through Set-CaContext and is passed down to every requests to identify the URL to connect to and pass down necessary authorization headers.</maml:para>
+      <maml:para>Get context about the connected instance. The context information is provided through Set-CAContext and is passed down to every requests to identify the URL to connect to and pass down necessary authorization headers.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -148,14 +148,14 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-CaDocument -Id 12345678</dev:code>
+        <dev:code>PS C:\&gt; Get-CADocument -Id 12345678</dev:code>
         <dev:remarks>
           <maml:para>Return the document that have the corresponding ID.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>-------------------------- Example 2 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-CaDocument -Id 12345678 -ContextOnly</dev:code>
+        <dev:code>PS C:\&gt; Get-CADocument -Id 12345678 -ContextOnly</dev:code>
         <dev:remarks>
           <maml:para>Return the document that have the corresponding ID. Body is not returned</maml:para>
         </dev:remarks>
@@ -181,7 +181,7 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Document</maml:name>
           <maml:description>
-            <maml:para>[CADocument] object obtained through `Get-CaDocument`</maml:para>
+            <maml:para>[CADocument] object obtained through `Get-CADocument`</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
           <dev:type>
@@ -220,7 +220,7 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Document</maml:name>
         <maml:description>
-          <maml:para>[CADocument] object obtained through `Get-CaDocument`</maml:para>
+          <maml:para>[CADocument] object obtained through `Get-CADocument`</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
         <dev:type>
@@ -486,7 +486,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>New-CaInfoPanel</command:name>
+      <command:name>New-CAInfoPanel</command:name>
       <command:verb>New</command:verb>
       <command:noun>CaInfoPanel</command:noun>
       <maml:description>
@@ -498,7 +498,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>New-CaInfoPanel</maml:name>
+        <maml:name>New-CAInfoPanel</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Message</maml:name>
           <maml:description>
@@ -555,7 +555,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; New-CaInfoPanel -Message 'Hello world'</dev:code>
+        <dev:code>PS C:\&gt; New-CAInfoPanel -Message 'Hello world'</dev:code>
         <dev:remarks>
           <maml:para>Create an info panel.</maml:para>
         </dev:remarks>
@@ -565,7 +565,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>New-CaTable</command:name>
+      <command:name>New-CATable</command:name>
       <command:verb>New</command:verb>
       <command:noun>CaTable</command:noun>
       <maml:description>
@@ -577,7 +577,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>New-CaTable</maml:name>
+        <maml:name>New-CATable</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Title</maml:name>
           <maml:description>
@@ -617,7 +617,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
           <maml:name>Columns</maml:name>
           <maml:description>
-            <maml:para>List of columns to be included in the table. Strings or CATableColumn objects (See New-CaTableColumn) can be included</maml:para>
+            <maml:para>List of columns to be included in the table. Strings or CATableColumn objects (See New-CATableColumn) can be included</maml:para>
           </maml:description>
           <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
           <dev:type>
@@ -689,7 +689,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
         <maml:name>Columns</maml:name>
         <maml:description>
-          <maml:para>List of columns to be included in the table. Strings or CATableColumn objects (See New-CaTableColumn) can be included</maml:para>
+          <maml:para>List of columns to be included in the table. Strings or CATableColumn objects (See New-CATableColumn) can be included</maml:para>
         </maml:description>
         <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
         <dev:type>
@@ -816,14 +816,14 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
     [PSCustomObject]@{Word1 = 'testA'; Word2 = 'test2A';word3 = '11';word4 = '22' }
 )
 
-$Table = New-CaTable -Style Wide -Columns @(
+$Table = New-CATable -Style Wide -Columns @(
     New-CATableColumn -Name 'Word1' #-Width 48
     New-CATableColumn -Name 'Word2' -Text 'Second word'
     'word3',
     'word4'
    ) -Title 'List of manufacturers' -InfoMessage "This table was last generated $((Get-Date).ToLongDateString())" -Rows $ListOfObject -TitleTag h1</dev:code>
         <dev:remarks>
-          <maml:para>Create a new confluence table using the wide style with "List of manufacturers" title surrounded by a H1 tag (default is h2) along with a info panel. $ListOfObject will be iterated upon and each members will be added to the table. New-CaTableColumn can be used to specify a different text for the header and a custom width.</maml:para>
+          <maml:para>Create a new confluence table using the wide style with "List of manufacturers" title surrounded by a H1 tag (default is h2) along with a info panel. $ListOfObject will be iterated upon and each members will be added to the table. New-CATableColumn can be used to specify a different text for the header and a custom width.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -839,7 +839,7 @@ $Table = New-CaTable -Style Wide -Columns @(
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Create a table column definition. This is used to define which member of the passed down object will be used to build the table. New-CaTable accept both strings and CaTableColumn object. This cmdled usefulness is when the object to be iterated need to have a different header text from the property name and / or additional options, such as custom width, need to be set.</maml:para>
+      <maml:para>Create a table column definition. This is used to define which member of the passed down object will be used to build the table. New-CATable accept both strings and CaTableColumn object. This cmdled usefulness is when the object to be iterated need to have a different header text from the property name and / or additional options, such as custom width, need to be set.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -948,7 +948,7 @@ $Table = New-CaTable -Style Wide -Columns @(
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; $Table = New-CaTable -Style Wide -Columns @(
+        <dev:code>PS C:\&gt; $Table = New-CATable -Style Wide -Columns @(
     New-CATableColumn -Name 'Word1' #-Width 48
     New-CATableColumn -Name 'Word2' -Text 'Second word' -Width 100
     'word3',
@@ -1239,7 +1239,7 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
         <dev:code>PS C:\&gt; Set-CADocument -Document $Document -Body 'Hello world'</dev:code>
         <dev:remarks>
-          <maml:para>Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CaDocument</maml:para>
+          <maml:para>Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CADocument</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
@@ -1396,13 +1396,13 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
         <dev:code>PS C:\&gt; $Doc = Get-CADocument -Id 929823883  
-# $Table = New-CaTable ...
-# $Table2 = New-CaTable ...
+# $Table = New-CATable ...
+# $Table2 = New-CATable ...
 Update-CATable -Document $Doc -Title 'List of manufacturers' -NewContent $Table
 Update-CATable -Document $Doc -Title 'Order history' -NewContent $Table2
-Set-CaDocument -Document $Doc</dev:code>
+Set-CADocument -Document $Doc</dev:code>
         <dev:remarks>
-          <maml:para>Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CaDocument.</maml:para>
+          <maml:para>Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CADocument.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>

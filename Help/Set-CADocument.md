@@ -32,7 +32,7 @@ Update confluence document with the new content.
 PS C:\> Set-CADocument -Document $Document -Body 'Hello world'
 ```
 
-Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CaDocument 
+Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CADocument 
 
 ### Example 2
 ```powershell

@@ -17,7 +17,7 @@ Get-CAContext [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Get context about the connected instance. The context information is provided through Set-CaContext and is passed down to every requests to identify the URL to connect to and pass down necessary authorization headers.
+Get context about the connected instance. The context information is provided through Set-CAContext and is passed down to every requests to identify the URL to connect to and pass down necessary authorization headers.
 
 ## EXAMPLES
 

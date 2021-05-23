@@ -24,14 +24,14 @@ Update locally a table in a confluence document. This cmdlet does not publish th
 ### Example 1
 ```powershell
 PS C:\> $Doc = Get-CADocument -Id 929823883  
-# $Table = New-CaTable ...
-# $Table2 = New-CaTable ...
+# $Table = New-CATable ...
+# $Table2 = New-CATable ...
 Update-CATable -Document $Doc -Title 'List of manufacturers' -NewContent $Table
 Update-CATable -Document $Doc -Title 'Order history' -NewContent $Table2
-Set-CaDocument -Document $Doc
+Set-CADocument -Document $Doc
 ```
 
-Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CaDocument.
+Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CADocument.
 
 ## PARAMETERS
 
