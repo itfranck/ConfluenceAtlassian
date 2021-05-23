@@ -1,14 +1,14 @@
 ---
 Module Name: ConfluenceAtlassian
-Module Guid: {{ Update Module Guid }}
-Download Help Link: {{ Update Download Link }}
-Help Version: {{ Update Help Version }}
-Locale: {{ Update Locale }}
+Module Guid: 867bf416-3ef1-47f3-b5d9-2fef572b1ed9
+Download Help Link: 
+Help Version: 
+Locale: en-US
 ---
 
 # ConfluenceAtlassian Module
 ## Description
-{{ Fill in the Description }}
+Perform document automation and interact with Confluence Atlassian REST API easily
 
 ## ConfluenceAtlassian Cmdlets
 ### [Get-CAContext](Get-CAContext.md)
