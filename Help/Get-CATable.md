@@ -32,7 +32,7 @@ Get a table with a h2 title of "List of manufacturer by Country" from the docume
 ## PARAMETERS
 
 ### -Document
-[CADocument] object obtained through `Get-CaDocument`
+[CADocument] object obtained through `Get-CADocument`
 
 ```yaml
 Type: CADocument

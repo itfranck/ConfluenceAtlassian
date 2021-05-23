@@ -17,13 +17,13 @@ New-CATableColumn [-Name] <String> [[-Text] <String>] [[-Width] <Int32>] [<Commo
 ```
 
 ## DESCRIPTION
-Create a table column definition. This is used to define which member of the passed down object will be used to build the table. New-CaTable accept both strings and CaTableColumn object. This cmdled usefulness is when the object to be iterated need to have a different header text from the property name and / or additional options, such as custom width, need to be set.
+Create a table column definition. This is used to define which member of the passed down object will be used to build the table. New-CATable accept both strings and CaTableColumn object. This cmdled usefulness is when the object to be iterated need to have a different header text from the property name and / or additional options, such as custom width, need to be set.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $Table = New-CaTable -Style Wide -Columns @(
+PS C:\> $Table = New-CATable -Style Wide -Columns @(
     New-CATableColumn -Name 'Word1' #-Width 48
     New-CATableColumn -Name 'Word2' -Text 'Second word' -Width 100
     'word3',

@@ -30,7 +30,7 @@ CompanyName = 'Unknown'
 Copyright = '(c) 2021 Francis Mercier. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Interact with Confluence Atlassian REST API easily'
+Description = 'Perform document automation and interact with Confluence Atlassian REST API easily'
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''

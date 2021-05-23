@@ -21,7 +21,7 @@
     
     if (![String]::IsNullOrWhiteSpace($Title)) { $Title = "<$TitleTag>$([System.Web.HttpUtility]::HtmlEncode($Title))</$TitleTag>`n" }
     if (![String]::IsNullOrWhiteSpace($Description)) { $Description = "<p>$([System.Web.HttpUtility]::HtmlEncode($Description))</p>`n" }
-    if (![String]::IsNullOrWhiteSpace($InfoMessage)) {$InfoMessage = New-CaInfoPanel -Message $InfoMessage}
+    if (![String]::IsNullOrWhiteSpace($InfoMessage)) {$InfoMessage = New-CAInfoPanel -Message $InfoMessage}
     $ColumnsString = [System.Text.StringBuilder]::new()
 
   
