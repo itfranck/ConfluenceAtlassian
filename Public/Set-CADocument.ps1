@@ -1,5 +1,5 @@
 ﻿function Set-CADocument {
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Set-CADocument.md')]
     param (
         [Parameter(ParameterSetName = 'Document',Mandatory=$true)]
         [ValidateNotNull()]

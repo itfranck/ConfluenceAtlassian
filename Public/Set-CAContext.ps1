@@ -1,5 +1,5 @@
 ﻿function Set-CAContext {
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Set-CAContext.md')]
     param (
         # Specifies the user account credentials to use when performing this task.
         [Parameter()]
