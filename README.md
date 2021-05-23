@@ -2,4 +2,4 @@
 
 Interact with Confluence Atlassian REST API easily
 
-[View module help](../Help/README.MD)
+[View module help](itfranck/repo/blob/main/README.md)
