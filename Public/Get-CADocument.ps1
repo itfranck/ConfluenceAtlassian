@@ -1,5 +1,5 @@
 ﻿function Get-CADocument {
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Get-CADocument.md')]
     param (
         [Int]$Id,
         [Switch]$ContextOnly

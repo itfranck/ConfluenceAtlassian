@@ -1,5 +1,5 @@
-﻿function New-CaTable {
-    [CmdletBinding()]
+﻿function New-CATable {
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/New-CATable.md')]
     param (
         [String]$Title,
         [String]$TitleTag = 'h2',

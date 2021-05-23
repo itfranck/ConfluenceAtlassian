@@ -1,5 +1,5 @@
 ﻿function Update-CATable {
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Update-CATable.md')]
     param (
         [CADocument]$Document, [String]$Title,
         [String]$TitleTag = 'h2',

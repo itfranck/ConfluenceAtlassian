@@ -1,5 +1,5 @@
 ﻿function New-CATableColumn {
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/New-CATableColumn.md')]
     param (
         [Parameter(Mandatory=$true)]
         [String]$Name,

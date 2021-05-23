@@ -1,5 +1,5 @@
 ﻿function Invoke-CAApi {
-    [CmdletBinding()]
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Invoke-CAApi.md')]
     param (
         [Microsoft.PowerShell.Commands.WebRequestMethod]$Method = [Microsoft.PowerShell.Commands.WebRequestMethod]::Get,
         [String]$Path,

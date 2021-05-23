@@ -1,5 +1,5 @@
-﻿function New-CaInfoPanel {
-    [CmdletBinding()]
+﻿function New-CAInfoPanel {
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/New-CAInfoPanel.md')]
     param (
         $Message
     )
