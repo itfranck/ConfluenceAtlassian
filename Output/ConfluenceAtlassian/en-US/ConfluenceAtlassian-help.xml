@@ -488,7 +488,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
     <command:details>
       <command:name>New-CAInfoPanel</command:name>
       <command:verb>New</command:verb>
-      <command:noun>CaInfoPanel</command:noun>
+      <command:noun>CAInfoPanel</command:noun>
       <maml:description>
         <maml:para>Create an information panel.</maml:para>
       </maml:description>
@@ -567,7 +567,7 @@ PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -
     <command:details>
       <command:name>New-CATable</command:name>
       <command:verb>New</command:verb>
-      <command:noun>CaTable</command:noun>
+      <command:noun>CATable</command:noun>
       <maml:description>
         <maml:para>Create a confluence table from an object.</maml:para>
       </maml:description>

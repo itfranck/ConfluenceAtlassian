@@ -9,6 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Update locally a table in a confluence document.
+
 ## SYNTAX
 
 ```

@@ -23,7 +23,7 @@ Create an information panel.
 
 ### Example 1
 ```powershell
-PS C:\> New-CAInfoPanel -Message 'Hello world' 
+PS C:\> New-CAInfoPanel -Message 'Hello world'
 ```
 
 Create an info panel.

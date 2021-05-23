@@ -69,7 +69,7 @@ Description = 'Interact with Confluence Atlassian REST API easily'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = @('Get-CAContext', 'Get-CADocument', 'Get-CATable', 'Invoke-CAApi', 'New-CAInfoPanel', 'New-CATable', 'New-CATableColumn', 'Set-CAContext', 'Set-CADocument', 'Update-CATable')
+FunctionsToExport = @('Get-CAContext', 'Get-CADocument', 'Get-CATable', 'Invoke-CAApi', 'New-CaInfoPanel', 'New-CATable', 'New-CATableColumn', 'Set-CAContext', 'Set-CADocument', 'Update-CATable')
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = '*'

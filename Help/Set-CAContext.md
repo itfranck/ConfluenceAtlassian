@@ -26,10 +26,10 @@ Set the context used for connectivity to your Confluence instance. Any request m
 PS C:\> $ConfluenceCreds = Get-Secret -Vault Default -Name 'Confluence' # PSCredential object
 # Alternative without the secret management module
 # $ConfluenceCreds = [PsCredential]::new('U', (ConvertTo-SecureString 'SomeSecret' -AsPlainText -Force))
-Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso' 
+Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'
 ```
-This example use the SecretManagement module to obtain a pscredential object containing the user confluence credential. This along with the instance name is used to create the context.
 
+This example use the SecretManagement module to obtain a pscredential object containing the user confluence credential. This along with the instance name is used to create the context.
 
 ## PARAMETERS
 

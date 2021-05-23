@@ -24,11 +24,10 @@ Retrieve a page from the connected instance.
 
 ### Example 1
 ```powershell
-PS C:\> Get-CADocument -Id 12345678 
+PS C:\> Get-CADocument -Id 12345678
 ```
 
 Return the document that have the corresponding ID.
-
 
 ### Example 2
 ```powershell
