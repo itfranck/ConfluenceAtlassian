@@ -1,9 +1,9 @@
-﻿function Set-CADocument {
-    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Set-CADocument.md')]
+﻿function Set-CAPage {
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Set-CAPage.md')]
     param (
         [Parameter(ParameterSetName = 'Document',Mandatory=$true)]
         [ValidateNotNull()]
-        [CADocument]$Document,
+        [CAPage]$Document,
         [Parameter(ParameterSetName = 'DocumentId',Mandatory=$true)]
         [Int]$DocumentId,
         [String]$Title,
@@ -11,7 +11,7 @@
     )
    
     if ($PSCmdlet.ParameterSetName -eq 'DocumentId') {
-        $Document = Get-CADocument -Id $DocumentId -ContextOnly
+        $Document = Get-CAPage -Id $DocumentId -ContextOnly
     }
 
        if ([String]::IsNullOrEmpty($Title)) { $Title = $Document.Title }

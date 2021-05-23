@@ -1,5 +1,5 @@
-﻿function Get-CADocument {
-    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Get-CADocument.md')]
+﻿function Get-CAPage {
+    [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Get-CAPage.md')]
     param (
         [Int]$Id,
         [Switch]$ContextOnly
@@ -12,7 +12,7 @@
 
 
     $Document = Invoke-CAApi -Path "/content/$Id" @Body
-    $Output = [CADocument]::New()
+    $Output = [CAPage]::New()
     $Output.Id = $Document.Id
     $Output.Body = $Document.Body.Storage.Value 
     $Output.Title = $Document.Title 

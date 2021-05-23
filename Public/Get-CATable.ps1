@@ -1,7 +1,7 @@
 ﻿function Get-CATable {
     [CmdletBinding(HelpUri = 'https://github.com/itfranck/ConfluenceAtlassian/blob/main/Help/Get-CATable.md')]
     param (
-        [CADocument]$Document, [String]$Title,
+        [CAPage]$Document, [String]$Title,
         [String]$TitleTag = 'h2'
     )
     

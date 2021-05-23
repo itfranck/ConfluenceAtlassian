@@ -13,7 +13,7 @@ Get a table from a document body.
 ## SYNTAX
 
 ```
-Get-CATable [[-Document] <CADocument>] [[-Title] <String>] [[-TitleTag] <String>] [<CommonParameters>]
+Get-CATable [[-Document] <CAPage>] [[-Title] <String>] [[-TitleTag] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -23,7 +23,7 @@ Get a table from a document body.
 
 ### Example 1
 ```powershell
-PS C:\> $Doc  = Get-CADocument -Id 1849330118
+PS C:\> $Doc  = Get-CAPage -Id 1849330118
 PS C:\> Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -TitleTag h2
 ```
 
@@ -32,10 +32,10 @@ Get a table with a h2 title of "List of manufacturer by Country" from the docume
 ## PARAMETERS
 
 ### -Document
-[CADocument] object obtained through `Get-CADocument`
+[CAPage] object obtained through `Get-CAPage`
 
 ```yaml
-Type: CADocument
+Type: CAPage
 Parameter Sets: (All)
 Aliases:
 

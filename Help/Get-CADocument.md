@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-CADocument
+# Get-CAPage
 
 ## SYNOPSIS
 Retrieve a page from the connected instance.
@@ -13,7 +13,7 @@ Retrieve a page from the connected instance.
 ## SYNTAX
 
 ```
-Get-CADocument [[-Id] <Int32>] [-ContextOnly] [<CommonParameters>]
+Get-CAPage [[-Id] <Int32>] [-ContextOnly] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -24,14 +24,14 @@ Retrieve a page from the connected instance.
 
 ### Example 1
 ```powershell
-PS C:\> Get-CADocument -Id 12345678
+PS C:\> Get-CAPage -Id 12345678
 ```
 
 Return the document that have the corresponding ID.
 
 ### Example 2
 ```powershell
-PS C:\> Get-CADocument -Id 12345678 -ContextOnly
+PS C:\> Get-CAPage -Id 12345678 -ContextOnly
 ```
 
 Return the document that have the corresponding ID. Body is not returned

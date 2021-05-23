@@ -1,4 +1,4 @@
-﻿class CADocument {
+﻿class CAPage {
     [Int]$Id
     [String]$Title
     [Int]$Version

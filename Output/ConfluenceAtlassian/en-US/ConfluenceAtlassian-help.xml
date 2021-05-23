@@ -56,9 +56,9 @@
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Get-CADocument</command:name>
+      <command:name>Get-CAPage</command:name>
       <command:verb>Get</command:verb>
-      <command:noun>CADocument</command:noun>
+      <command:noun>CAPage</command:noun>
       <maml:description>
         <maml:para>Retrieve a page from the connected instance.</maml:para>
       </maml:description>
@@ -68,7 +68,7 @@
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Get-CADocument</maml:name>
+        <maml:name>Get-CAPage</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Id</maml:name>
           <maml:description>
@@ -148,14 +148,14 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-CADocument -Id 12345678</dev:code>
+        <dev:code>PS C:\&gt; Get-CAPage -Id 12345678</dev:code>
         <dev:remarks>
           <maml:para>Return the document that have the corresponding ID.</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>-------------------------- Example 2 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Get-CADocument -Id 12345678 -ContextOnly</dev:code>
+        <dev:code>PS C:\&gt; Get-CAPage -Id 12345678 -ContextOnly</dev:code>
         <dev:remarks>
           <maml:para>Return the document that have the corresponding ID. Body is not returned</maml:para>
         </dev:remarks>
@@ -181,11 +181,11 @@
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Document</maml:name>
           <maml:description>
-            <maml:para>[CADocument] object obtained through `Get-CADocument`</maml:para>
+            <maml:para>[CAPage] object obtained through `Get-CAPage`</maml:para>
           </maml:description>
-          <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">CAPage</command:parameterValue>
           <dev:type>
-            <maml:name>CADocument</maml:name>
+            <maml:name>CAPage</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -220,11 +220,11 @@
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Document</maml:name>
         <maml:description>
-          <maml:para>[CADocument] object obtained through `Get-CADocument`</maml:para>
+          <maml:para>[CAPage] object obtained through `Get-CAPage`</maml:para>
         </maml:description>
-        <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">CAPage</command:parameterValue>
         <dev:type>
-          <maml:name>CADocument</maml:name>
+          <maml:name>CAPage</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -282,7 +282,7 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; $Doc  = Get-CADocument -Id 1849330118
+        <dev:code>PS C:\&gt; $Doc  = Get-CAPage -Id 1849330118
 PS C:\&gt; Get-CATable -Document $Doc -Title 'List of manufacturer by Country' -TitleTag h2</dev:code>
         <dev:remarks>
           <maml:para>Get a table with a h2 title of "List of manufacturer by Country" from the document ($doc.Body). Table will only be fetched if it has the corresponding title, an optional info panel and the table itself.</maml:para>
@@ -1069,9 +1069,9 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
   </command:command>
   <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
     <command:details>
-      <command:name>Set-CADocument</command:name>
+      <command:name>Set-CAPage</command:name>
       <command:verb>Set</command:verb>
-      <command:noun>CADocument</command:noun>
+      <command:noun>CAPage</command:noun>
       <maml:description>
         <maml:para>Update confluence document with the new content.</maml:para>
       </maml:description>
@@ -1081,7 +1081,7 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
-        <maml:name>Set-CADocument</maml:name>
+        <maml:name>Set-CAPage</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Body</maml:name>
           <maml:description>
@@ -1099,9 +1099,9 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
           <maml:description>
             <maml:para>{{ Fill Document Description }}</maml:para>
           </maml:description>
-          <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">CAPage</command:parameterValue>
           <dev:type>
-            <maml:name>CADocument</maml:name>
+            <maml:name>CAPage</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -1120,7 +1120,7 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
         </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
-        <maml:name>Set-CADocument</maml:name>
+        <maml:name>Set-CAPage</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Body</maml:name>
           <maml:description>
@@ -1177,9 +1177,9 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
         <maml:description>
           <maml:para>{{ Fill Document Description }}</maml:para>
         </maml:description>
-        <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">CAPage</command:parameterValue>
         <dev:type>
-          <maml:name>CADocument</maml:name>
+          <maml:name>CAPage</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -1237,16 +1237,16 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Set-CADocument -Document $Document -Body 'Hello world'</dev:code>
+        <dev:code>PS C:\&gt; Set-CAPage -Document $Document -Body 'Hello world'</dev:code>
         <dev:remarks>
-          <maml:para>Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CADocument</maml:para>
+          <maml:para>Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CAPage</maml:para>
         </dev:remarks>
       </command:example>
       <command:example>
         <maml:title>-------------------------- Example 2 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Set-CADocument -DocumentId 1932948583 -Body 'Hello world'</dev:code>
+        <dev:code>PS C:\&gt; Set-CAPage -DocumentId 1932948583 -Body 'Hello world'</dev:code>
         <dev:remarks>
-          <maml:para>Set the body of the document to 'Hello world' and update the web document. The document ID is used as a reference to the document to be updated thus it does not depend on Get-CADocument at all.</maml:para>
+          <maml:para>Set the body of the document to 'Hello world' and update the web document. The document ID is used as a reference to the document to be updated thus it does not depend on Get-CAPage at all.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>
@@ -1262,7 +1262,7 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Update locally a table in a confluence document. This cmdlet does not publish the changes. For that, Set-CADocument must be used. The table format expected is a Title (surrounded by the title tag (h2 by default)) then optionally an information panel and the table itself.</maml:para>
+      <maml:para>Update locally a table in a confluence document. This cmdlet does not publish the changes. For that, Set-CAPage must be used. The table format expected is a Title (surrounded by the title tag (h2 by default)) then optionally an information panel and the table itself.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
@@ -1270,11 +1270,11 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Document</maml:name>
           <maml:description>
-            <maml:para>CaDocument object obtained from Get-CADocument. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.</maml:para>
+            <maml:para>CaDocument object obtained from Get-CAPage. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.</maml:para>
           </maml:description>
-          <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">CAPage</command:parameterValue>
           <dev:type>
-            <maml:name>CADocument</maml:name>
+            <maml:name>CAPage</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>None</dev:defaultValue>
@@ -1321,11 +1321,11 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Document</maml:name>
         <maml:description>
-          <maml:para>CaDocument object obtained from Get-CADocument. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.</maml:para>
+          <maml:para>CaDocument object obtained from Get-CAPage. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.</maml:para>
         </maml:description>
-        <command:parameterValue required="true" variableLength="false">CADocument</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">CAPage</command:parameterValue>
         <dev:type>
-          <maml:name>CADocument</maml:name>
+          <maml:name>CAPage</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>None</dev:defaultValue>
@@ -1395,14 +1395,14 @@ Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso'</dev:code>
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; $Doc = Get-CADocument -Id 929823883  
+        <dev:code>PS C:\&gt; $Doc = Get-CAPage -Id 929823883  
 # $Table = New-CATable ...
 # $Table2 = New-CATable ...
 Update-CATable -Document $Doc -Title 'List of manufacturers' -NewContent $Table
 Update-CATable -Document $Doc -Title 'Order history' -NewContent $Table2
-Set-CADocument -Document $Doc</dev:code>
+Set-CAPage -Document $Doc</dev:code>
         <dev:remarks>
-          <maml:para>Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CADocument.</maml:para>
+          <maml:para>Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CAPage.</maml:para>
         </dev:remarks>
       </command:example>
     </command:examples>

@@ -13,34 +13,34 @@ Update locally a table in a confluence document.
 ## SYNTAX
 
 ```
-Update-CATable [[-Document] <CADocument>] [[-Title] <String>] [[-TitleTag] <String>] [[-NewContent] <Object>]
+Update-CATable [[-Document] <CAPage>] [[-Title] <String>] [[-TitleTag] <String>] [[-NewContent] <Object>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Update locally a table in a confluence document. This cmdlet does not publish the changes. For that, Set-CADocument must be used. The table format expected is a Title (surrounded by the title tag (h2 by default)) then optionally an information panel and the table itself. 
+Update locally a table in a confluence document. This cmdlet does not publish the changes. For that, Set-CAPage must be used. The table format expected is a Title (surrounded by the title tag (h2 by default)) then optionally an information panel and the table itself. 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> $Doc = Get-CADocument -Id 929823883  
+PS C:\> $Doc = Get-CAPage -Id 929823883  
 # $Table = New-CATable ...
 # $Table2 = New-CATable ...
 Update-CATable -Document $Doc -Title 'List of manufacturers' -NewContent $Table
 Update-CATable -Document $Doc -Title 'Order history' -NewContent $Table2
-Set-CADocument -Document $Doc
+Set-CAPage -Document $Doc
 ```
 
-Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CADocument.
+Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CAPage.
 
 ## PARAMETERS
 
 ### -Document
-CaDocument object obtained from Get-CADocument. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.
+CaDocument object obtained from Get-CAPage. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.
 
 ```yaml
-Type: CADocument
+Type: CAPage
 Parameter Sets: (All)
 Aliases:
 

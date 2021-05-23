@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Set-CADocument
+# Set-CAPage
 
 ## SYNOPSIS
 Update confluence document with the new content.
@@ -14,12 +14,12 @@ Update confluence document with the new content.
 
 ### Document
 ```
-Set-CADocument -Document <CADocument> [-Title <String>] [-Body <String>] [<CommonParameters>]
+Set-CAPage -Document <CAPage> [-Title <String>] [-Body <String>] [<CommonParameters>]
 ```
 
 ### DocumentId
 ```
-Set-CADocument -DocumentId <Int32> [-Title <String>] [-Body <String>] [<CommonParameters>]
+Set-CAPage -DocumentId <Int32> [-Title <String>] [-Body <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,17 +29,17 @@ Update confluence document with the new content.
 
 ### Example 1
 ```powershell
-PS C:\> Set-CADocument -Document $Document -Body 'Hello world'
+PS C:\> Set-CAPage -Document $Document -Body 'Hello world'
 ```
 
-Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CADocument 
+Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CAPage 
 
 ### Example 2
 ```powershell
-PS C:\> Set-CADocument -DocumentId 1932948583 -Body 'Hello world'
+PS C:\> Set-CAPage -DocumentId 1932948583 -Body 'Hello world'
 ```
 
-Set the body of the document to 'Hello world' and update the web document. The document ID is used as a reference to the document to be updated thus it does not depend on Get-CADocument at all.
+Set the body of the document to 'Hello world' and update the web document. The document ID is used as a reference to the document to be updated thus it does not depend on Get-CAPage at all.
 
 ## PARAMETERS
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 {{ Fill Document Description }}
 
 ```yaml
-Type: CADocument
+Type: CAPage
 Parameter Sets: Document
 Aliases:
 

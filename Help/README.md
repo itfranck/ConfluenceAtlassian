@@ -14,7 +14,7 @@ Perform document automation and interact with Confluence Atlassian REST API easi
 ### [Get-CAContext](Get-CAContext.md)
 Get context about the connected instance.
 
-### [Get-CADocument](Get-CADocument.md)
+### [Get-CAPage](Get-CAPage.md)
 Retrieve a page from the connected instance.
 
 ### [Get-CATable](Get-CATable.md)
@@ -35,7 +35,7 @@ Create a table column definition.
 ### [Set-CAContext](Set-CAContext.md)
 Set the context used for connectivity to your Confluence instance.
 
-### [Set-CADocument](Set-CADocument.md)
+### [Set-CAPage](Set-CAPage.md)
 Update confluence document with the new content.
 
 ### [Update-CATable](Update-CATable.md)
