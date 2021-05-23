@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CADocument
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Update confluence document with the new content.
 
 ## SYNTAX
 
@@ -23,16 +23,22 @@ Set-CADocument -DocumentId <Int32> [-Title <String>] [-Body <String>] [<CommonPa
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Update confluence document with the new content.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Set-CADocument -Document $Document -Body 'Hello world'
 ```
 
-{{ Add example description here }}
+Set the body of the document to 'Hello world' and update the web document. The document must first be retrieved through Get-CaDocument 
+
+### Example 2
+```powershell
+PS C:\> Set-CADocument -DocumentId 1932948583 -Body 'Hello world'
+```
+Set the body of the document to 'Hello world' and update the web document. The document ID is used as a reference to the document to be updated thus it does not depend on Get-CADocument at all.
 
 ## PARAMETERS
 

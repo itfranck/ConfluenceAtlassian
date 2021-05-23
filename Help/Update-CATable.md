@@ -8,8 +8,7 @@ schema: 2.0.0
 # Update-CATable
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
-
+Update locally a table in a confluence document.
 ## SYNTAX
 
 ```
@@ -18,21 +17,26 @@ Update-CATable [[-Document] <CADocument>] [[-Title] <String>] [[-TitleTag] <Stri
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Update locally a table in a confluence document. This cmdlet does not publish the changes. For that, Set-CADocument must be used. The table format expected is a Title (surrounded by the title tag (h2 by default)) then optionally an information panel and the table itself. 
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $Doc = Get-CADocument -Id 929823883  
+# $Table = New-CaTable ...
+# $Table2 = New-CaTable ...
+Update-CATable -Document $Doc -Title 'List of manufacturers' -NewContent $Table
+Update-CATable -Document $Doc -Title 'Order history' -NewContent $Table2
+Set-CaDocument -Document $Doc
 ```
 
-{{ Add example description here }}
+Update 2 tables from the provided document with their replacement / updated table then publish the changes through Set-CaDocument.
 
 ## PARAMETERS
 
 ### -Document
-{{ Fill Document Description }}
+CaDocument object obtained from Get-CADocument. The -ContextOnly switch should be avoided when this cmdlet is used since the document body need to be fetched in order to update the tables.
 
 ```yaml
 Type: CADocument
@@ -47,7 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewContent
-{{ Fill NewContent Description }}
+New content that will replace the original table.
 
 ```yaml
 Type: Object
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-{{ Fill Title Description }}
+Title of the table to be replaced.
 
 ```yaml
 Type: String
@@ -77,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -TitleTag
-{{ Fill TitleTag Description }}
+Tag surrounding the title (default is h2)
 
 ```yaml
 Type: String

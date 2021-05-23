@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CAContext
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Set the context used for connectivity to your Confluence instance.
 
 ## SYNTAX
 
@@ -17,21 +17,24 @@ Set-CAContext [[-Credential] <PSCredential>] [[-InstanceName] <Object>] [<Common
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Set the context used for connectivity to your Confluence instance. Any request made afterward will use the provided context to locate the resources and authorize the operations.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ConfluenceCreds = Get-Secret -Vault Default -Name 'Confluence' # PSCredential object
+# Alternative without the secret management module
+# $ConfluenceCreds = [PsCredential]::new('U', (ConvertTo-SecureString 'SomeSecret' -AsPlainText -Force))
+Set-CAContext -Credential $ConfluenceCreds -InstanceName 'Contoso' 
 ```
+This example use the SecretManagement module to obtain a pscredential object containing the user confluence credential. This along with the instance name is used to create the context.
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Credential
-{{ Fill Credential Description }}
+Credentials to connect to confluence. Username should be the email address and password the token generated from atlassian (https://id.atlassian.com/manage-profile/security/api-tokens). This is not the user password.
 
 ```yaml
 Type: PSCredential
@@ -46,7 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceName
-{{ Fill InstanceName Description }}
+Instance name of the workspace to connect to. This is the custom url part that represent your organization. (https://<InstanceName>.atlassian.net/wiki/rest/api)
 
 ```yaml
 Type: Object

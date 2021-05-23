@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CaTable
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Create a confluence table from an object.
 
 ## SYNTAX
 
@@ -18,21 +18,31 @@ New-CaTable [[-Title] <String>] [[-TitleTag] <String>] [[-InfoMessage] <String>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Create a confluence table from an object.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> $ListOfObject = @(
+    [PSCustomObject]@{Word1 = 'test'; Word2 = 'test2'; word3 = '11'; word4 = '22'  }
+    [PSCustomObject]@{Word1 = 'testA'; Word2 = 'test2A';word3 = '11';word4 = '22' }
+)
+
+$Table = New-CaTable -Style Wide -Columns @(
+    New-CATableColumn -Name 'Word1' #-Width 48
+    New-CATableColumn -Name 'Word2' -Text 'Second word'
+    'word3',
+    'word4'
+   ) -Title 'List of manufacturers' -InfoMessage "This table was last generated $((Get-Date).ToLongDateString())" -Rows $ListOfObject -TitleTag h1
 ```
 
-{{ Add example description here }}
+Create a new confluence table using the wide style with "List of manufacturers" title surrounded by a H1 tag (default is h2) along with a info panel. $ListOfObject will be iterated upon and each members will be added to the table. New-CaTableColumn can be used to specify a different text for the header and a custom width.
 
 ## PARAMETERS
 
 ### -Columns
-{{ Fill Columns Description }}
+List of columns to be included in the table. Strings or CATableColumn objects (See New-CaTableColumn) can be included
 
 ```yaml
 Type: Object[]
@@ -47,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -HeaderStyle
-{{ Fill HeaderStyle Description }}
+Define the header type. By default, only a Row header is used.
 
 ```yaml
 Type: String
@@ -63,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -InfoMessage
-{{ Fill InfoMessage Description }}
+Optional info panel to be put in between the table title and the table itself. 
 
 ```yaml
 Type: String
@@ -78,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Numbered
-{{ Fill Numbered Description }}
+If $true, a numbered table will be created. 
 
 ```yaml
 Type: SwitchParameter
@@ -93,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rows
-{{ Fill Rows Description }}
+Object that will constitute the table. It should be a list of objects.
 
 ```yaml
 Type: Object[]
@@ -108,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Style
-{{ Fill Style Description }}
+Confluence table style.
 
 ```yaml
 Type: String
@@ -124,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-{{ Fill Title Description }}
+Title of the table.
 
 ```yaml
 Type: String
@@ -139,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -TitleTag
-{{ Fill TitleTag Description }}
+Tag of the table. This can be set to any valid html value (eg:h1-h6;p). Default is h2
 
 ```yaml
 Type: String
