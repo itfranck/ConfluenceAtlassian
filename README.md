@@ -5,6 +5,8 @@ Perform document automation and interact with Confluence Atlassian REST API easi
 ## Installation
 `Install-Module ConfluenceAtlassian`
 
+[Module Documentation](Help/README.md)
+
 ## Introduction
 
 This module was made with the idea to ease document automation that I already made on a semi-regular basis. It offer cmdlet to interact more seamlessly with Confluence and update pages. 
@@ -20,6 +22,6 @@ You can view the open issues to get a generic idea of what is planned. For V1.0,
 - Additional macros (Expand / Code)
 - Additional cmdlet to support document automation (remove old versions / find pages by title / space / keywords, etc...)
 
-## Module help
+## Usage
 
-[View cmdlets documentation](Help/README.md)
+
