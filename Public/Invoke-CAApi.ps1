@@ -17,6 +17,11 @@
         $Headers = @{Authorization = $Script:CAContext.Headers.Authorization }
     }
 
+    # Trim rest/api from the path if present since already in the api url
+    # Some confluence links (eg: Next) will contains the /rest/api bit.
+    # Removing it allow to use the "Next" type of links directly in Invoke-CAApi
+    $path = $Path -replace '^/rest/api', ''
+
     $Params = @{
         Method = $Method
         Uri =  "$($Script:CAContext.ApiUrl)$Path"
