@@ -119,6 +119,7 @@ task WriteStats {
 
 task ExportHelp -if (Test-Path -Path "$script:ModuleRoot\Help") {
     New-ExternalHelp -Path "$script:ModuleRoot\Help" -OutputPath $script:HelpPath
+    Update-MarkdownHelpModule -Path "$script:ModuleRoot\Help" -RefreshModulePage -ModulePagePath "$script:ModuleRoot\Help\README.md" 
 }
-Update-MarkdownHelpModule -Path "$script:ModuleRoot\Help" -RefreshModulePage -ModulePagePath "$script:ModuleRoot\Help\README.md" 
+
 
