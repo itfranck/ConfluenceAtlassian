@@ -55,6 +55,7 @@ do {
                 Status      = $Space.status
                 BaseObject  = $Space
                 Expand      = $ExpandOutput
+                Url         = "$($Script:CAContext.BaseUrl)$($Space._links.webui)"
             }
         }
     

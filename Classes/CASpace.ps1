@@ -7,4 +7,5 @@
     [Object]$BaseObject
     [String]$Description
     [HashTable]$Expand = @{}
+    [String]$Url
 }
